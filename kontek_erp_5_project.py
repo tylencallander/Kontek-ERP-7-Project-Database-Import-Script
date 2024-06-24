@@ -29,7 +29,7 @@ DEBUG_MODE = True
 # Functions
 def dbquery(query):
     global db
-    mycursor = db.cursor()
+    mycursor = db.cursor() 
     mycursor.execute(query)
     result = mycursor.fetchall()
     mycursor.close()
@@ -119,8 +119,6 @@ if len(checkResult) >= 1:
     print("Project "+projectNumber+" Already Exists. Exiting!")
     raise ProjectAlreadyExists
     
-
-
 # Create Project
 insertQuery = "insert into project (projectnumber, details) values ('"+projectNumber+"','"+json.dumps(details)+"') returning id;"
 if DEBUG_MODE:
