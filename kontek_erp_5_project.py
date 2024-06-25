@@ -116,7 +116,6 @@ if len(checkResult) >= 1:
     print("Project "+projectNumber+" Already Exists. Exiting!")
     raise ProjectAlreadyExists
     
-# Create Project
 insertQuery = "insert into project (projectnumber, details) values ('"+projectNumber+"','"+json.dumps(details)+"') returning id;"
 if DEBUG_MODE:
     print(insertQuery)
@@ -129,6 +128,5 @@ if len(insertResult) != 1:
 else:
     print("Project "+projectNumber+" Successfully Imported!")
 
-# Close Database Connection
 db.commit() #!!!!!!
 db.close()
