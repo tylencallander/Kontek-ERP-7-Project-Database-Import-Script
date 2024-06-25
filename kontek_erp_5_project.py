@@ -1,14 +1,3 @@
-#
-# Kontek Spare Parts / Inventory Program
-# Project XLSX Import to Database
-#
-# Coryright Kontek Ecology Systems Inc 2021
-#
-# Email: cwelch@kontekecology.com
-#
-# Date: 2021-05-14
-#
-
 import openpyxl
 import psycopg2
 import json
