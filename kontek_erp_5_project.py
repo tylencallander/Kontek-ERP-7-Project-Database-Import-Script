@@ -9,7 +9,6 @@
 # Date: 2021-05-14
 #
 
-# Imports  
 import openpyxl
 import psycopg2
 import json
