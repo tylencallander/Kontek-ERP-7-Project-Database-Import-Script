@@ -101,11 +101,9 @@ print(IMPORT_FILE_NAME+' Successfully Parsed')
 if DEBUG_MODE:
     print(details)
 
-# Connect to DB
 global db
 db = psycopg2.connect(host=DATABASE_HOST, port=DATABASE_PORT, database=DATABASE_DATABASE, user=DATABASE_USERNAME, password=DATABASE_PASSWORD)
 
-# Make Sure Project Doesn't Already Exist
 checkQuery = "select id from project where projectnumber = '"+projectNumber+"';"
 if DEBUG_MODE:
     print(checkQuery)
@@ -128,5 +126,5 @@ if len(insertResult) != 1:
 else:
     print("Project "+projectNumber+" Successfully Imported!")
 
-db.commit() #!!!!!!
+db.commit() 
 db.close()
