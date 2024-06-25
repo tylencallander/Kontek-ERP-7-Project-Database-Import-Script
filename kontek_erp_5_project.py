@@ -26,7 +26,6 @@ IMPORT_FILE_SHEET_NAME = "NewProject"
 
 DEBUG_MODE = True
 
-# Functions
 def dbquery(query):
     global db
     mycursor = db.cursor() 
@@ -35,13 +34,11 @@ def dbquery(query):
     mycursor.close()
     return result
 
-# Exceptions
 class ProjectAlreadyExists(Exception):
 	pass
 class FailedToInsertProject(Exception):
 	pass
 
-# Open File and Import Data
 wb = openpyxl.load_workbook(IMPORT_FILE_NAME)
 if DEBUG_MODE:
     print(wb.sheetnames)
