@@ -14,7 +14,6 @@ import openpyxl
 import psycopg2
 import json
 
-# Global Variables
 DATABASE_HOST = "192.168.1.120"
 DATABASE_PORT = "5432"
 DATABASE_DATABASE = "spareparts"
