@@ -1,5 +1,3 @@
-# Fix
-
 import openpyxl
 import psycopg2
 import json
